@@ -20,7 +20,7 @@ if st.button("Open box", key=box_open_key):
         result.append(item)
     else:
         st.write("The box is empty!")
-        break
+
 
 df = pd.DataFrame(result, columns=['Items'])
 st.write("Result:")
