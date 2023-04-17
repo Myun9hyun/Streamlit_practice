@@ -25,8 +25,3 @@ df = pd.DataFrame(result, columns=['Items'])
 st.write("Result:")
 st.write(df)
 
-
-# 현재 시간을 이용하여 유일한 키 생성
-box_open_key = f"box_open_{int(time.time())}"
-
-if st.button("Open box", key=box_open_key):
