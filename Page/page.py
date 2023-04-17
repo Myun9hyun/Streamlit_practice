@@ -12,7 +12,7 @@ def open_box():
     items.remove(item)
     return item
 
-while st.button('Open Box'):
+while st.button('Open Box', key='box_open'):
     item = open_box()
     if item:
         st.write(f"You got {item}!")
