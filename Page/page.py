@@ -25,8 +25,7 @@ box = RandomBox()
 
 # 사용자 이름을 입력하고, 물품과 확률을 추가하는 입력 창
 st.header('랜덤박스 만들기')
-usernames = ['Alice', 'Bob', 'Charlie', 'Dave']
-username_input = st.selectbox('사용자 이름', usernames)
+username_input = st.text_input('사용자 이름')
 item_input = st.text_input('추가할 물품')
 probability_input = st.number_input('물품의 확률', value=0.0, step=0.1, format='%.1f')
 add_button = st.button('추가')
@@ -41,8 +40,9 @@ if draw_button:
     if not box.items:
         st.warning('랜덤박스가 비어있습니다.')
     else:
-        item = box.draw(username_input)
-        st.success(f'{username_input}이(가) {item["Item"]}을(를) 뽑았습니다.')
+        username_select = st.selectbox('뽑을 사용자 이름', [username_input] + ['Alice', 'Bob', 'Charlie', 'Dave'])
+        item = box.draw(username_select)
+        st.success(f'{item["Username"]}이(가) {item["Item"]}을(를) 뽑았습니다.')
 
         # 데이터프레임에 저장
         df = pd.DataFrame([item])
