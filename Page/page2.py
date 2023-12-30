@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.title("퀴즈 만들어보기")
-password1 = "창설이벤트"
+password1 = "도전"
 answer1 = "바나나"
  # 1번
 quiz1_password = st.text_input("퀴즈를 풀고싶다면, [도전]이라고 적어주세요",  key="quiz1_password")
