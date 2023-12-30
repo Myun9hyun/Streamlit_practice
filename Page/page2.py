@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
+# from streamlit_option_menu import option_menu
 
 st.write("안녕")
 password1 = "창설이벤트"
