@@ -11,7 +11,7 @@ if quiz1_password == password1:
         if quiz1 == answer1:
             st.balloons()
             st.success("정답입니다!")
-            st.write("우리 길드와 함께해줘서 고마워 ╰(*°▽°*)╯")
+            st.write("원숭이가 좋아하는 과일은 바나나야! ╰(*°▽°*)╯")
         else:
             st.warning("다시 한 번 생각해봐!")
     if st.button("힌트 보기", key="check_hint_button1"):
